@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo "enter n value"
+read n
+i=1
+while [ $i -le $n ]
+do
+if [ `expr $i % 3` -eq 0 ] && [ `expr $i % 5` -eq 0 ]
+then
+echo "AVAAMO"
+elif [ `expr $i % 5` -eq 0 ]
+then
+echo "AMO"
+elif [ `expr $i % 3` -eq 0 ] 
+then
+echo "AVA"
+else
+echo "$i"
+fi
+i=`expr $i + 1`
+done
